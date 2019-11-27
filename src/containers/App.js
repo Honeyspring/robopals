@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import  './App.css';
-//import {robots} from '../robots'
+import {robots} from '../robots'
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 
@@ -10,8 +10,8 @@ class App extends Component{
     constructor(){
     super()
     this.state={
-    //robots: robots,
-    robots:[],
+    robots: robots,
+    //robots:[],
     searchField:''
         }
 
@@ -41,9 +41,9 @@ class App extends Component{
             <h1 className='f1'>Robopals</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
                 <Scroll>
-                <ErrorBoundry>
+                    <ErrorBoundry>
                 <CardList robots={filteredRobots}/>
-                </ErrorBoundry>
+                    </ErrorBoundry>
                 </Scroll>
                 
             </div>
