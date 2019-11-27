@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'WebFont Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('WebFont Regular'), url('webfont.woff') format('woff');
+    }
+h1{
+    font-family: 'WebFont Regular';
+    font-weight: 200;
+    color:#fff;
+}
