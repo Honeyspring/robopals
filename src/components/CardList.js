@@ -8,7 +8,8 @@ const cardArray = robots.map((user,i)=>{
         key={i}
         id={robots[i].id} 
         name={robots[i].name} 
-        email={robots[i].emails} />;
+        email={robots[i].email} 
+         phone={robots[i].phone} />
         });
     return(
         <div>

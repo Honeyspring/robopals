@@ -17,7 +17,7 @@ class App extends Component{
 
     }
     componentDidMount(){
-        fetch('https://randomuser.me/api/')
+        fetch('https://jsonplaceholder.typicode.com/users')
         
         .then(response=> response.json())
         .then(users=>this.setState({robots:users})) //updates the app state with the users returned from the server
@@ -33,6 +33,7 @@ class App extends Component{
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
     
         });
+          console.log(filteredRobots);
         if (this.state.robots.length === 0){
             return <h1 className="tc">Loading....</h1>
         }else{
